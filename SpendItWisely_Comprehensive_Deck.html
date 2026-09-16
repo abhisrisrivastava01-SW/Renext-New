@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SpendItWisely — Comprehensive Investor Presentation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  
+  @page {
+    size: 16in 9in;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #070B14;
+    color: #F8FAFC;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .slide {
+    width: 16in;
+    height: 9in;
+    page-break-after: always;
+    page-break-inside: avoid;
+    position: relative;
+    padding: 0.65in 0.85in;
+    background: #0B0F19;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide-cover {
+    background: radial-gradient(circle at 80% 20%, #102C26 0%, #0B0F19 60%);
+    justify-content: center;
+  }
+
+  /* Header styles */
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: #1E293B;
+    border: 1px solid #334155;
+    color: #10B981;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+  
+  .slide-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #F8FAFC;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  
+  .slide-subtitle {
+    font-size: 16px;
+    color: #94A3B8;
+    margin-bottom: 24px;
+    max-width: 1200px;
+  }
+  
+  .content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+    flex: 1;
+  }
+  
+  .grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    flex: 1;
+  }
+  
+  .card {
+    background: #151E32;
+    border: 1px solid #243356;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .card-highlight {
+    background: #102324;
+    border-color: #10B981;
+  }
+
+  .card-alert {
+    background: #231219;
+    border-color: #EF4444;
+  }
+  
+  .card-accent-top {
+    border-top: 4px solid #10B981;
+  }
+  .card-blue-top {
+    border-top: 4px solid #3B82F6;
+  }
+  .card-gold-top {
+    border-top: 4px solid #F59E0B;
+  }
+  .card-rose-top {
+    border-top: 4px solid #F43F5E;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #F8FAFC;
+  }
+
+  .card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .card p, .card li {
+    font-size: 13.5px;
+    color: #94A3B8;
+    line-height: 1.5;
+  }
+  
+  .card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card ul li::before {
+    content: "• ";
+    color: #10B981;
+    font-weight: bold;
+  }
+
+  .stat-val {
+    font-size: 38px;
+    font-weight: 800;
+    color: #F8FAFC;
+    margin: 8px 0;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #94A3B8;
+    text-transform: uppercase;
+  }
+
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+  }
+
+  th {
+    background: #162238;
+    color: #10B981;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid #243356;
+  }
+
+  td {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #94A3B8;
+    border: 1px solid #243356;
+    background: #151E32;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: #121B2D;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0.35in;
+    left: 0.85in;
+    right: 0.85in;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #475569;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-top: 1px solid #1E293B;
+    padding-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 01: COVER -->
+<div class="slide slide-cover">
+  <div style="max-width: 1000px;">
+    <div style="height: 4px; width: 120px; background: #10B981; margin-bottom: 24px;"></div>
+    <div class="badge">A RENEXT TECHNOLOGIES PVT LTD VENTURE</div>
+    <h1 style="font-size: 64px; font-weight: 800; color: #F8FAFC; margin-bottom: 14px; letter-spacing: -1px;">SpendItWisely</h1>
+    <h2 style="font-size: 24px; font-weight: 500; color: #E2E8F0; margin-bottom: 20px;">Turning Every GST Invoice Into a Compounding Savings Asset</h2>
+    <p style="font-size: 16px; font-weight: 700; color: #3B82F6; margin-bottom: 40px; letter-spacing: 1px;">
+      GST INTELLIGENCE &times; MULTIMODAL AI &times; CONSUMER LOYALTY &times; HYPERLOCAL COMMERCE
+    </p>
+    
+    <div style="display: flex; gap: 20px;">
+      <div style="background: #131C2E; border: 1px solid #243356; border-radius: 10px; padding: 14px 24px; width: 220px;">
+        <div style="color: #10B981; font-weight: 800; font-size: 16px;">01. SCAN</div>
+        <div style="color: #94A3B8; font-size: 12px; margin-top: 4px;">Multimodal AI Vision</div>
+      </div>
+      <div style="background: #131C2E; border: 1px solid #243356; border-radius: 10px; padding: 14px 24px; width: 220px;">
+        <div style="color: #3B82F6; font-weight: 800; font-size: 16px;">02. TRACK</div>
+        <div style="color: #94A3B8; font-size: 12px; margin-top: 4px;">Real-Time Tax Intel</div>
+      </div>
+      <div style="background: #131C2E; border: 1px solid #243356; border-radius: 10px; padding: 14px 24px; width: 220px;">
+        <div style="color: #F59E0B; font-weight: 800; font-size: 16px;">03. SAVE</div>
+        <div style="color: #94A3B8; font-size: 12px; margin-top: 4px;">Hyperlocal Kirana Offsets</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>SPENDITWISELY &bull; CONFIDENTIAL INVESTOR PRESENTATION</span>
+    <span>SEED ROUND DECK</span>
+  </div>
+</div>
+
+<!-- SLIDE 02: THE SALES SLIDE -->
+<div class="slide">
+  <div class="badge">BUSINESS DEEP DIVE</div>
+  <h2 class="slide-title">Sales Slide: How We Sell, Price & Scale Purchasing Velocity</h2>
+  <div class="slide-subtitle">A multi-sided monetization engine driving low-friction checkout across consumers, merchants, and enterprise brands.</div>
+  
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">1. How We Sell & Sales Channels</h4>
+        <ul>
+          <li><strong>Direct Ground Sales:</strong> Field cluster scouts onboard 25–30 Kiranas per commercial corridor in 48 hours with turnkey QR kits.</li>
+          <li><strong>Indirect Counter Flywheel:</strong> In-store counter standees turn every merchant cashier into a consumer sales rep.</li>
+          <li><strong>B2B Enterprise Sales:</strong> Direct outreach to FMCG brand managers offering real-time offline SKU intelligence dashboards.</li>
+          <li><strong>Digital In-App Funnel:</strong> Organic app onboarding powered by receipt-sharing viral loops and localized deals.</li>
+        </ul>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">2. What We Charge & Who Pays</h4>
+        <ul>
+          <li><strong>Merchant Micro-Take (1.5%–2.5%):</strong> Paid by local Kiranas on incremental footfall GMV—less than 1/10th of aggregator commissions.</li>
+          <li><strong>SpendIt VIP (₹199/mo or ₹1,999/yr):</strong> Paid by middle-class power shoppers to unlock 2.5&times; higher monthly reward caps and Vault access.</li>
+          <li><strong>Brand Co-Sponsorship & Data:</strong> FMCG conglomerates fund targeted SKU promotions out of their multi-crore offline trade budgets.</li>
+          <li><strong>Zero Equity Cash Burn:</strong> All discounts are funded by merchants and FMCG brands, not company equity.</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">3. Purchasing Process & Compensation</h4>
+        <ul>
+          <li><strong>Consumer Purchase Flow:</strong> Scan paper bill &rarr; Instant credit accrual &rarr; 1-click dynamic discount QR redemption at checkout.</li>
+          <li><strong>Merchant Purchasing:</strong> Zero POS terminal hardware cost. Onboarding takes &lt;2 minutes via mobile web and lightweight QR.</li>
+          <li><strong>Sales Rep Scoring:</strong> Reps scored on 30-day merchant retention (&gt;75%) and active daily invoice verification throughput.</li>
+          <li><strong>Compensation Structure:</strong> Base pay + ₹500 per activated store + 0.25% trail commission on corridor GMV.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="padding: 16px 20px; background: #121B2D; flex: 0.4;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="color: #10B981; font-weight: 700; font-size: 13px;">COMPETITIVE PRICING FIT: </span>
+          <span style="color: #E2E8F0; font-size: 13px;">While Blinkit/Zepto charge punitive 18%–28% aggregator fees, SpendItWisely’s 1.5%–2.5% fee aligns incentives and creates impenetrable merchant loyalty.</span>
+        </div>
+        <div style="background: #1E293B; border: 1px solid #334155; padding: 6px 14px; border-radius: 6px; font-weight: 700; color: #F59E0B; font-size: 12px;">
+          PILOT GMV RUN-RATE: ₹14.5 CR
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 02 &bull; SALES ENGINE</span>
+  </div>
+</div>
+
+<!-- SLIDE 03: THE MARKETING SLIDE -->
+<div class="slide">
+  <div class="badge">DEMAND ACQUISITION</div>
+  <h2 class="slide-title">Marketing Slide: Attention Capture, Viral Loops & Market Sizing</h2>
+  <div class="slide-subtitle">Capturing India's offline spending through point-of-sale guerrilla placement and high-conversion viral hooks.</div>
+
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-rose-top">
+        <h4 style="color: #F43F5E;">1. Attention & Guerrilla Marketing</h4>
+        <ul>
+          <li><strong>Point-of-Sale Guerrilla Hook:</strong> High-contrast standees placed next to UPI soundboxes: <em>"Turn this paper bill into ₹50 cash discount."</em></li>
+          <li><strong>The Cashier Script:</strong> Cashiers trained to prompt: <em>"Scan this bill on SpendItWisely before throwing it away."</em></li>
+          <li><strong>Bill Sleeve Branding:</strong> Partnered supermarkets slip paper invoices into branded SpendIt discount sleeves.</li>
+          <li><strong>No Billboard Burn:</strong> 100% of marketing expenditure deployed at physical point of checkout where intent is peak.</li>
+        </ul>
+      </div>
+
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">2. Viral Mechanics & Social Loops</h4>
+        <ul>
+          <li><strong>Double-Sided Referral Hook:</strong> <em>"Give ₹25, Get ₹25"</em> in SpendIt Credits unlocked when a referred friend scans their first valid bill.</li>
+          <li><strong>Localized WhatsApp Communities:</strong> Curated broadcast groups for neighborhood clusters broadcasting daily flash kirana deals.</li>
+          <li><strong>Social Brag Mechanics:</strong> Monthly savings summaries easily shareable to WhatsApp Status (<em>"Saved ₹1,420 on groceries this month"</em>).</li>
+          <li><strong>Targeted Geo-Ads:</strong> Hyperlocal Instagram reels geo-fenced strictly within 2km of active merchant clusters.</li>
+        </ul>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">3. TAM &rarr; SAM &rarr; SOM Allocation</h4>
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 11px; color: #94A3B8; font-weight: 700;">TOTAL ADDRESSABLE MARKET (TAM)</div>
+          <div style="font-size: 20px; font-weight: 800; color: #F8FAFC;">₹75+ Lakh Cr ($900B+)</div>
+          <div style="font-size: 11.5px; color: #64748B;">Total Indian retail with ₹1.5–2L Cr monthly GST collections.</div>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 11px; color: #94A3B8; font-weight: 700;">SERVICEABLE ADDRESSABLE MARKET (SAM)</div>
+          <div style="font-size: 20px; font-weight: 800; color: #3B82F6;">₹8.5 Lakh Cr ($102B)</div>
+          <div style="font-size: 11.5px; color: #64748B;">GST-registered urban & semi-urban retail and supermarkets.</div>
+        </div>
+        <div>
+          <div style="font-size: 11px; color: #94A3B8; font-weight: 700;">SERVICEABLE OBTAINABLE MARKET (SOM - Y3)</div>
+          <div style="font-size: 20px; font-weight: 800; color: #10B981;">₹340 Cr GMV</div>
+          <div style="font-size: 11.5px; color: #64748B;">750,000 active shoppers across 15 high-density urban clusters.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-4" style="flex: 0.35;">
+      <div class="card" style="padding: 12px 16px;"><div class="stat-label">BLENDED CAC</div><div class="stat-val" style="color: #10B981; font-size: 26px;">₹85</div></div>
+      <div class="card" style="padding: 12px 16px;"><div class="stat-label">12-MO CUSTOMER LTV</div><div class="stat-val" style="color: #3B82F6; font-size: 26px;">₹1,850</div></div>
+      <div class="card" style="padding: 12px 16px;"><div class="stat-label">LTV / CAC RATIO</div><div class="stat-val" style="color: #F59E0B; font-size: 26px;">21.7&times;</div></div>
+      <div class="card" style="padding: 12px 16px;"><div class="stat-label">PAYBACK PERIOD</div><div class="stat-val" style="color: #F8FAFC; font-size: 26px;">1.8 Months</div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 03 &bull; DEMAND & MARKETING</span>
+  </div>
+</div>
+
+<!-- SLIDE 04: THE TEAM SLIDE -->
+<div class="slide">
+  <div class="badge">EXECUTION CAPABILITY</div>
+  <h2 class="slide-title">Team Slide: Domain Depth Across Fintech, AI & Retail Logistics</h2>
+  <div class="slide-subtitle">A leadership team uniquely equipped to execute at the complex intersection of Indian tax law and offline retail.</div>
+
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-accent-top">
+        <h3 style="margin-bottom: 2px;">Founder & CEO</h3>
+        <h4 style="color: #10B981;">Fintech & Strategy Lead</h4>
+        <p style="margin-bottom: 12px;"><strong>Parent Company:</strong> Renext Technologies Pvt Ltd</p>
+        <ul>
+          <li>10+ years engineering digital payments, merchant acquisition, and transactional software systems.</li>
+          <li>Deep expertise in Indian GST architecture, compliance guardrails, and consumer behavioral economics.</li>
+          <li>Spearheading pilot execution across Rudrapur manufacturing clusters and Bengaluru tech hubs.</li>
+        </ul>
+      </div>
+
+      <div class="card card-blue-top">
+        <h3 style="margin-bottom: 2px;">Co-Founder & CTO</h3>
+        <h4 style="color: #3B82F6;">Head of AI & Cloud Architecture</h4>
+        <p style="margin-bottom: 12px;"><strong>Core Domain:</strong> Computer Vision & High-Throughput Rails</p>
+        <ul>
+          <li>Expert in multimodal OCR, perceptual image hashing, and real-time document verification pipelines.</li>
+          <li>Architected the sub-3-second receipt parsing model with &gt;98.5% line-item recognition accuracy.</li>
+          <li>Built multi-factor fraud detection preventing duplicate receipt uploads and synthetic bill injection.</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold-top">
+        <h3 style="margin-bottom: 2px;">VP of Operations</h3>
+        <h4 style="color: #F59E0B;">Ground Density & Merchant Growth</h4>
+        <p style="margin-bottom: 12px;"><strong>Core Domain:</strong> FMCG Trade & Offline Retail</p>
+        <ul>
+          <li>12+ years leading offline distribution, kirana field onboarding, and regional FMCG trade logistics.</li>
+          <li>Architected the 48-hour corridor merchant density model maintaining 75%+ 30-day merchant retention.</li>
+          <li>Direct ties with regional Vyapar Mandals and retail merchant federations.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-2" style="flex: 0.65;">
+      <div class="card">
+        <h4 style="color: #3B82F6;">Key Advisors & Board Governance</h4>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 8px;">
+          Backed by veteran mentors spanning Indian retail tech, ex-FMCG commercial directors, and senior GST tax consultants ensuring ironclad regulatory compliance and corporate governance.
+        </p>
+        <p style="font-size: 12px; color: #94A3B8;">
+          Quarterly board audit reviews; formal adherence to Digital Personal Data Protection (DPDP) Act.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="color: #10B981;">Critical Roles to Fill with Seed Capital</h4>
+        <ul>
+          <li><strong>Lead ML Engineer (Fraud & Document Intel):</strong> Scaling perceptual hashing and on-device OCR inference.</li>
+          <li><strong>Regional Head of Merchant Operations:</strong> Driving 500+ store cluster density across North & South hubs.</li>
+          <li><strong>Head of Regulatory & Government Affairs:</strong> Managing public GST registry API bridges and DPDP compliance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 04 &bull; LEADERSHIP & EXECUTION</span>
+  </div>
+</div>
+
+<!-- SLIDE 05: THE PARTNER SLIDE -->
+<div class="slide">
+  <div class="badge">ECOSYSTEM LEVERAGE</div>
+  <h2 class="slide-title">Partner Slide: Strategic Alliances, ONDC Logistics & Brand Networks</h2>
+  <div class="slide-subtitle">Leveraging external infrastructure and trade promotion budgets rather than building expensive proprietary silos.</div>
+
+  <div class="content-area">
+    <div class="grid-4">
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">1. Merchant Networks</h4>
+        <p style="font-weight: 700; color: #F8FAFC; margin-bottom: 6px;">Vyapar Mandals & Kirana Federations</p>
+        <p style="font-size: 12.5px;">Partnerships with regional merchant associations provide trusted corridor-level access to onboard 50+ stores per cluster in single blitzes.</p>
+        <div style="margin-top: 10px; font-size: 11px; color: #10B981; font-weight: 700;">ROI: 80% lower merchant CAC</div>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">2. Logistics & ONDC Rail</h4>
+        <p style="font-weight: 700; color: #F8FAFC; margin-bottom: 6px;">Shadowfax &bull; Porter &bull; Dunzo</p>
+        <p style="font-size: 12.5px;">ONDC-compatible delivery network integration handles on-demand boutique trials and extended orders on 100% variable pricing.</p>
+        <div style="margin-top: 10px; font-size: 11px; color: #3B82F6; font-weight: 700;">ROI: Zero fleet capex</div>
+      </div>
+
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">3. FMCG Brand Sponsors</h4>
+        <p style="font-weight: 700; color: #F8FAFC; margin-bottom: 6px;">Enterprise Consumer Brands</p>
+        <p style="font-size: 12.5px;">FMCG brands co-sponsor receipt cashbacks on targeted SKUs to capture verified offline market share and redirect trade budgets.</p>
+        <div style="margin-top: 10px; font-size: 11px; color: #F59E0B; font-weight: 700;">ROI: 100% margin data revenue</div>
+      </div>
+
+      <div class="card card-rose-top">
+        <h4 style="color: #F43F5E;">4. Master Artisans</h4>
+        <p style="font-weight: 700; color: #F8FAFC; margin-bottom: 6px;">Regional Weaver Co-ops</p>
+        <p style="font-size: 12.5px;">Direct ties with heritage handloom hubs power the SpendIt Vault micro-batches, cutting out 4 layers of wholesale middlemen.</p>
+        <div style="margin-top: 10px; font-size: 11px; color: #F43F5E; font-weight: 700;">ROI: 35%–45% gross margins</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="flex: 0.65;">
+      <div class="card">
+        <h4 style="color: #F59E0B;">How Partners Leverage SpendItWisely IP</h4>
+        <ul>
+          <li><strong>SpendIt Verified Merchant Seal:</strong> Digital trust badge that neighborhood shoppers seek out for guaranteed savings.</li>
+          <li><strong>Anonymized SKU Data Feeds:</strong> FMCG partners access granular offline basket analytics impossible to obtain via UPI rails.</li>
+          <li><strong>Dynamic Reward Credit API:</strong> Kiranas and supermarkets integrate point deduction directly into their local billing software.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4 style="color: #10B981;">Coopetition & Network Symmetry</h4>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 8px;">
+          We do not compete with Kiranas or delivery providers—we aggregate them. By positioning SpendItWisely as the neighborhood retailer’s defensive weapon against quick commerce monopolies, partner retention exceeds 85%.
+        </p>
+        <div style="background: #121B2D; border: 1px solid #243356; padding: 8px 12px; border-radius: 6px; font-size: 11.5px; color: #10B981; font-weight: 600;">
+          PARTNER RETENTION GOAL: &gt;80% 90-Day Merchant Stickiness Across Target Pilot Hubs
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 05 &bull; PARTNERSHIPS</span>
+  </div>
+</div>
+
+<!-- SLIDE 06: THE FINANCIAL SLIDE -->
+<div class="slide">
+  <div class="badge">FINANCIAL MODEL</div>
+  <h2 class="slide-title">Financial Slide: 3-Year Projections, P&L & Cash Flow Forecast</h2>
+  <div class="slide-subtitle">Demonstrating positive unit contribution margins scaling from 2 pilot cities to a national 15-city footprint.</div>
+
+  <div class="content-area">
+    <table style="margin-bottom: 16px;">
+      <thead>
+        <tr>
+          <th>OPERATING METRIC & P&L LINE</th>
+          <th>YEAR 1 (PILOT CLUSTERS)</th>
+          <th>YEAR 2 (REGIONAL SCALE)</th>
+          <th>YEAR 3 (NATIONAL NETWORK)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Annualized Network GMV</strong></td>
+          <td style="color: #F59E0B; font-weight: 700;">₹14.50 Cr</td>
+          <td style="color: #F59E0B; font-weight: 700;">₹85.00 Cr</td>
+          <td style="color: #10B981; font-weight: 800; font-size: 14px;">₹340.00 Cr</td>
+        </tr>
+        <tr>
+          <td><strong>Active Transacting Users</strong></td>
+          <td>25,000</td>
+          <td>180,000</td>
+          <td style="color: #10B981; font-weight: 700;">750,000</td>
+        </tr>
+        <tr>
+          <td><strong>Partnered Kiranas & Boutiques</strong></td>
+          <td>120 Stores</td>
+          <td>800 Stores</td>
+          <td style="color: #10B981; font-weight: 700;">3,500 Stores</td>
+        </tr>
+        <tr>
+          <td><strong>Gross Platform Revenue</strong></td>
+          <td style="color: #3B82F6; font-weight: 700;">₹1.10 Cr</td>
+          <td style="color: #3B82F6; font-weight: 700;">₹8.20 Cr</td>
+          <td style="color: #3B82F6; font-weight: 800; font-size: 14px;">₹38.50 Cr</td>
+        </tr>
+        <tr>
+          <td>&bull; Merchant GMV Micro-Take (1.5%–2.5%)</td>
+          <td>₹0.29 Cr</td>
+          <td>₹1.87 Cr</td>
+          <td>₹7.48 Cr</td>
+        </tr>
+        <tr>
+          <td>&bull; SpendIt VIP Consumer Subscriptions</td>
+          <td>₹0.48 Cr</td>
+          <td>₹3.60 Cr</td>
+          <td>₹16.50 Cr</td>
+        </tr>
+        <tr>
+          <td>&bull; Apparel & SpendIt Vault (D2C Margins)</td>
+          <td>₹0.21 Cr</td>
+          <td>₹1.73 Cr</td>
+          <td>₹9.52 Cr</td>
+        </tr>
+        <tr>
+          <td>&bull; B2B FMCG Brand Insights & Ad SaaS</td>
+          <td>₹0.12 Cr</td>
+          <td>₹1.00 Cr</td>
+          <td>₹5.00 Cr</td>
+        </tr>
+        <tr>
+          <td><strong>Total Operating Expenses (OpEx)</strong></td>
+          <td>₹2.17 Cr</td>
+          <td>₹8.45 Cr</td>
+          <td>₹25.90 Cr</td>
+        </tr>
+        <tr>
+          <td><strong>EBITDA / Net Operating Profit</strong></td>
+          <td style="color: #F43F5E; font-weight: 700;">(₹1.07 Cr)</td>
+          <td style="color: #F59E0B; font-weight: 700;">(₹0.25 Cr) [Breakeven]</td>
+          <td style="color: #10B981; font-weight: 800; font-size: 14px;">+₹12.60 Cr (Profitable)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="grid-3" style="flex: 0.65;">
+      <div class="card">
+        <h4 style="color: #3B82F6;">Key Expense Drivers</h4>
+        <ul>
+          <li><strong>Tech & AI Cloud OCR (18%):</strong> Quantized models reduce per-receipt inference cost from ₹0.22 to ₹0.04.</li>
+          <li><strong>Merchant Ground Ops (32%):</strong> Field onboarding personnel across city target clusters.</li>
+          <li><strong>User Acquisition (28%):</strong> Point-of-sale acrylic standees and referral bonuses.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4 style="color: #10B981;">Core Operating Assumptions</h4>
+        <ul>
+          <li><strong>Order Frequency:</strong> 12–15 repeat neighborhood transactions per active user monthly.</li>
+          <li><strong>Average Basket Size:</strong> ₹480 (Kirana) &bull; ₹2,800 (Apparel & Vault).</li>
+          <li><strong>VIP Conversion:</strong> 10%–12% of transacting user base converts to paid subscription.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4 style="color: #F59E0B;">Industry Benchmark Comparison</h4>
+        <ul>
+          <li><strong>Cred:</strong> High rewards engagement, but high burn; SIW has merchant-funded point sinks.</li>
+          <li><strong>CashKaro:</strong> High margins, but purely online affiliate; SIW unlocks offline physical commerce.</li>
+          <li><strong>Zepto/Blinkit:</strong> 25% take rate burnt on dark stores; SIW captures positive unit margin from day 1.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 06 &bull; FINANCIAL FORECAST</span>
+  </div>
+</div>
+
+<!-- SLIDE 07: THE INVESTMENT SLIDE -->
+<div class="slide">
+  <div class="badge">CAPITAL ASK</div>
+  <h2 class="slide-title">Investment Slide: Raising Seed Round for Cluster Expansion</h2>
+  <div class="slide-subtitle">Securing an 18-month operational runway to establish defensible merchant density and positive contribution margins.</div>
+
+  <div class="content-area">
+    <div class="grid-2">
+      <div class="card card-highlight">
+        <h4 style="color: #10B981;">The Ask & Deal Terms</h4>
+        <div style="margin-bottom: 16px;">
+          <div class="stat-label">TARGET CAPITAL RAISE</div>
+          <div class="stat-val" style="color: #10B981;">₹4.00 Cr <span style="font-size: 16px; color: #94A3B8; font-weight: 500;">($500k USD)</span></div>
+        </div>
+        <ul>
+          <li><strong>Round Structure:</strong> Compulsorily Convertible Preference Shares (CCPS) or Seed SAFE.</li>
+          <li><strong>Target Pre-Money Valuation:</strong> ₹20.00 Cr ($2.4M).</li>
+          <li><strong>Post-Money Valuation:</strong> ₹24.00 Cr &bull; Dilution: 16.7%.</li>
+          <li><strong>Runway:</strong> 18 to 20 Months across dual pilot and expansion hubs.</li>
+          <li><strong>Parent Backing:</strong> Fully incubated by Renext Technologies Pvt Ltd.</li>
+        </ul>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">Use of Proceeds Allocation</h4>
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 4px;">
+              <span>Product & AI Engineering</span><span>35% (₹1.40 Cr)</span>
+            </div>
+            <div style="background: #1E293B; border-radius: 4px; height: 8px; overflow: hidden;">
+              <div style="background: #10B981; height: 100%; width: 35%;"></div>
+            </div>
+            <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">Multimodal OCR model optimization, anti-fraud perceptual hashing, lightweight POS rails.</div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 4px;">
+              <span>Merchant Density & Ground Operations</span><span>25% (₹1.00 Cr)</span>
+            </div>
+            <div style="background: #1E293B; border-radius: 4px; height: 8px; overflow: hidden;">
+              <div style="background: #3B82F6; height: 100%; width: 25%;"></div>
+            </div>
+            <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">Field merchant onboarding in Rudrapur & Bengaluru commercial market corridors.</div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 4px;">
+              <span>User Acquisition & Viral Loops</span><span>20% (₹0.80 Cr)</span>
+            </div>
+            <div style="background: #1E293B; border-radius: 4px; height: 8px; overflow: hidden;">
+              <div style="background: #F59E0B; height: 100%; width: 20%;"></div>
+            </div>
+            <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">Point-of-sale standee placement, cashier incentives, and user referral credit pool.</div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 4px;">
+              <span>Working Capital & Regulatory Buffer</span><span>20% (₹0.80 Cr)</span>
+            </div>
+            <div style="background: #1E293B; border-radius: 4px; height: 8px; overflow: hidden;">
+              <div style="background: #A855F7; height: 100%; width: 20%;"></div>
+            </div>
+            <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;">DPDP compliance audits, institutional GST legal architecture, operational liquidity.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding: 16px 20px; background: #121B2D; flex: 0.5;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <span style="color: #F59E0B; font-weight: 700; font-size: 13px;">CAPITALIZATION TABLE (POST-SEED): </span>
+          <span style="color: #E2E8F0; font-size: 13px;">Founders & Renext Technologies: <strong>73.3%</strong> &bull; Seed Investor Syndicate: <strong>16.7%</strong> &bull; ESOP Pool: <strong>10.0%</strong></span>
+        </div>
+        <div style="background: #1E293B; border: 1px solid #334155; padding: 6px 14px; border-radius: 6px; font-weight: 700; color: #10B981; font-size: 12px;">
+          18-MO SERIES A MILESTONE: ₹25 CR GMV
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>SLIDE 07 &bull; THE INVESTMENT ASK</span>
+  </div>
+</div>
+
+<!-- SLIDE 08: APPENDIX A - TEAM PROFILES & OKRS -->
+<div class="slide">
+  <div class="badge">PITCH DECK APPENDIX A</div>
+  <h2 class="slide-title">Appendix A: Executive Team Profiles & Quarterly OKRs</h2>
+  <div class="slide-subtitle">Granular leadership profiles, accomplishments, and quantifiable objectives for the upcoming operational cycle.</div>
+
+  <div class="content-area">
+    <div class="grid-2">
+      <div class="card card-accent-top">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 14px;">
+          <div style="width: 54px; height: 54px; border-radius: 50%; background: #10B981; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: #0B0F19;">
+            CEO
+          </div>
+          <div>
+            <h3 style="margin-bottom: 2px;">Founder & Chief Executive Officer</h3>
+            <p style="font-size: 12px; color: #10B981; font-weight: 600;">Renext Technologies Pvt Ltd &bull; contact@spenditwisely.com</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 10px;">
+          <strong>Key Expertise:</strong> Fintech distribution models, behavioral loyalty frameworks, venture scaling, and Indian tax compliance systems.
+        </p>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 14px;">
+          <strong>Accomplishments:</strong> Conceptualized SpendItWisely's closed-loop GST reward mechanism, structured dual-city pilot partnerships, and negotiated master weaver federation agreements.
+        </p>
+        <div style="background: #121B2D; border: 1px solid #243356; border-radius: 8px; padding: 12px;">
+          <div style="font-size: 11px; font-weight: 700; color: #10B981; text-transform: uppercase; margin-bottom: 6px;">Next Period OKRs (Q3–Q4 2026):</div>
+          <ul style="font-size: 12px;">
+            <li>Close ₹4.0 Cr Seed financing round with strategic angel syndicate.</li>
+            <li>Achieve 100+ active GST-registered Kiranas onboarded across Rudrapur.</li>
+            <li>Maintain &gt;65% 30-day user retention on receipt scanning in pilot corridors.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card card-blue-top">
+        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 14px;">
+          <div style="width: 54px; height: 54px; border-radius: 50%; background: #3B82F6; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: #0B0F19;">
+            CTO
+          </div>
+          <div>
+            <h3 style="margin-bottom: 2px;">Co-Founder & Chief Technology Officer</h3>
+            <p style="font-size: 12px; color: #3B82F6; font-weight: 600;">Renext Technologies Pvt Ltd &bull; tech@spenditwisely.com</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 10px;">
+          <strong>Key Expertise:</strong> Multimodal computer vision, document intelligence, perceptual image hashing, high-throughput cloud microservices.
+        </p>
+        <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 14px;">
+          <strong>Accomplishments:</strong> Developed proprietary sub-3-second bill parser handling thermal paper distortions, crinkled slips, and complex tax splits with 98.5% accuracy.
+        </p>
+        <div style="background: #121B2D; border: 1px solid #243356; border-radius: 8px; padding: 12px;">
+          <div style="font-size: 11px; font-weight: 700; color: #3B82F6; text-transform: uppercase; margin-bottom: 6px;">Next Period OKRs (Q3–Q4 2026):</div>
+          <ul style="font-size: 12px;">
+            <li>Deploy on-device edge OCR to lower cloud API costs by 70%.</li>
+            <li>Achieve sub-2.0 second end-to-end receipt parsing latency.</li>
+            <li>Deploy multi-tenant lightweight merchant POS scanner web-app.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>APPENDIX A &bull; LEADERSHIP & OKRS</span>
+  </div>
+</div>
+
+<!-- SLIDE 09: APPENDIX B - STRATEGIC LENSES (BMC & SWOT) -->
+<div class="slide">
+  <div class="badge">PITCH DECK APPENDIX B1</div>
+  <h2 class="slide-title">Appendix B1: Business Model Canvas & Strategic SWOT Analysis</h2>
+  <div class="slide-subtitle">Comprehensive institutional mapping across value creation, revenue streams, and competitive positioning.</div>
+
+  <div class="content-area">
+    <div class="card" style="padding: 16px; margin-bottom: 14px;">
+      <h4 style="color: #10B981; margin-bottom: 10px;">The 9-Pillar Business Model Canvas</h4>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; font-size: 11.5px;">
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #F8FAFC;">Key Partners:</strong>
+          <p style="color: #94A3B8; margin-top: 4px;">Kirana federations, ONDC logistics, FMCG brands, Master weaver co-ops.</p>
+        </div>
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #F8FAFC;">Key Activities:</strong>
+          <p style="color: #94A3B8; margin-top: 4px;">AI invoice OCR, anti-fraud auditing, merchant density onboarding, demand routing.</p>
+        </div>
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #10B981;">Value Propositions:</strong>
+          <p style="color: #94A3B8; margin-top: 4px;">Consumers: Free savings on bills. Kiranas: Incremental footfall @ 2% fee. Brands: Offline SKU intel.</p>
+        </div>
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #F8FAFC;">Customer Relations:</strong>
+          <p style="color: #94A3B8; margin-top: 4px;">Automated savings wallet, neighborhood WhatsApp circles, VIP concierge.</p>
+        </div>
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #F8FAFC;">Customer Segments:</strong>
+          <p style="color: #94A3B8; margin-top: 4px;">Middle-class households, grocery shoppers, GST Kiranas, ethnic fashion buyers.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 11.5px; margin-top: 10px;">
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #EF4444;">Cost Structure:</strong>
+          <p style="color: #94A3B8; margin-top: 2px;">Cloud OCR inference, ground merchant ops reps, point-of-sale marketing standees, DPDP compliance.</p>
+        </div>
+        <div style="background: #121B2D; padding: 10px; border-radius: 6px; border: 1px solid #243356;">
+          <strong style="color: #3B82F6;">Revenue Streams:</strong>
+          <p style="color: #94A3B8; margin-top: 2px;">1.5%–2.5% merchant GMV micro-take, ₹199/mo SpendIt VIP subs, 25%–40% Vault margins, FMCG B2B data.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-4" style="flex: 0.85;">
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">STRENGTHS</h4>
+        <ul style="font-size: 11.5px;">
+          <li>Asset-light: zero warehouse capex.</li>
+          <li>First-mover in GST consumer loyalty.</li>
+          <li>Sub-3-second proprietary OCR.</li>
+          <li>High 21.7&times; LTV/CAC ratio.</li>
+        </ul>
+      </div>
+      <div class="card card-rose-top">
+        <h4 style="color: #F43F5E;">WEAKNESSES</h4>
+        <ul style="font-size: 11.5px;">
+          <li>Reliance on consumer habit shift.</li>
+          <li>Thermal bill fading / poor paper bills.</li>
+          <li>Requires high corridor store density.</li>
+          <li>Initial brand education required.</li>
+        </ul>
+      </div>
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">OPPORTUNITIES</h4>
+        <ul style="font-size: 11.5px;">
+          <li>Expansion into utility bill offsets.</li>
+          <li>ONDC national protocol integration.</li>
+          <li>Tier-2 & Tier-3 retail expansion.</li>
+          <li>Monetizing FMCG trade data feeds.</li>
+        </ul>
+      </div>
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">THREATS</h4>
+        <ul style="font-size: 11.5px;">
+          <li>UPI giants cloning bill scanner.</li>
+          <li>Aggressive quick-commerce subsidies.</li>
+          <li>GST portal API rate limit changes.</li>
+          <li>Counterfeit invoice attempts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>APPENDIX B1 &bull; STRATEGIC LENSES</span>
+  </div>
+</div>
+
+<!-- SLIDE 10: APPENDIX B2 - POWER, EFFECTS & NETWORK MODELS -->
+<div class="slide">
+  <div class="badge">PITCH DECK APPENDIX B2</div>
+  <h2 class="slide-title">Appendix B2: Power + Effects & Network Effect Value Models</h2>
+  <div class="slide-subtitle">Analyzing structural defensibility across 6 competitive powers and mathematical network models.</div>
+
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">1. Platform & Network Effects</h4>
+        <p style="font-size: 12.5px; color: #CBD5E1; margin-bottom: 6px;"><strong>Mechanism:</strong> Value &prop; n&sup2; (Metcalfe's Law)</p>
+        <p style="font-size: 12.5px; color: #94A3B8;">Each newly scanned receipt enriches our SKU dataset, making merchant deals more personalized and drawing more merchants to join the network.</p>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">2. Flywheel & Learning Effects</h4>
+        <p style="font-size: 12.5px; color: #CBD5E1; margin-bottom: 6px;"><strong>Mechanism:</strong> Compounding ML Accuracy</p>
+        <p style="font-size: 12.5px; color: #94A3B8;">With every 100k bills parsed, our multimodal model trains on rare local brands and distorted fonts, dropping parsing error rates below 1.2%.</p>
+      </div>
+
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">3. Scale & Production Power</h4>
+        <p style="font-size: 12.5px; color: #CBD5E1; margin-bottom: 6px;"><strong>Mechanism:</strong> Decreasing Marginal Unit Cost</p>
+        <p style="font-size: 12.5px; color: #94A3B8;">Cloud OCR costs decrease 80% through model quantization and on-device inference, while merchant acquisition cost is amortized over lifetime GMV.</p>
+      </div>
+    </div>
+
+    <div class="grid-3" style="flex: 1;">
+      <div class="card card-rose-top">
+        <h4 style="color: #F43F5E;">4. Promotion & Viral Spread</h4>
+        <p style="font-size: 12.5px; color: #CBD5E1; margin-bottom: 6px;"><strong>Mechanism:</strong> Group-Forming Model (2&#x207F;)</p>
+        <p style="font-size: 12.5px; color: #94A3B8;">Household shopping clusters and neighborhood WhatsApp groups share flash deals, creating exponential local word-of-mouth adoption.</p>
+      </div>
+
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">5. Protection & Switching Moats</h4>
+        <p style="font-size: 12.5px; color: #CBD5E1; margin-bottom: 6px;"><strong>Mechanism:</strong> Accumulated Stored Wallet Value</p>
+        <p style="font-size: 12.5px; color: #94A3B8;">Users with accumulated reward credits and complete tax receipt histories face high friction switching to un-incentivized platforms.</p>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">6. Mathematical Value Models</h4>
+        <div style="font-size: 12px; color: #94A3B8;">
+          <div style="margin-bottom: 4px;"><strong style="color: #F8FAFC;">Broadcasting (n):</strong> Daily app discount push.</div>
+          <div style="margin-bottom: 4px;"><strong style="color: #F8FAFC;">Two-Sided P2P (n&sup2;):</strong> Shoppers interacting with Kiranas.</div>
+          <div><strong style="color: #F8FAFC;">Group Forming (2&#x207F;):</strong> Apartment & neighborhood bulk-buying savings circles.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>APPENDIX B2 &bull; DEFENSIVE POWERS</span>
+  </div>
+</div>
+
+<!-- SLIDE 11: APPENDIX C - A16Z METRICS, PIRATE METRICS & VALUATION -->
+<div class="slide">
+  <div class="badge">PITCH DECK APPENDIX C</div>
+  <h2 class="slide-title">Appendix C: A16Z Framework Metrics, AARRR & Startup Valuation</h2>
+  <div class="slide-subtitle">Deep institutional rigor applying Andreessen Horowitz (A16Z) benchmarks and multi-model startup valuation.</div>
+
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">1. A16Z SaaS & Fintech Metrics</h4>
+        <ul style="font-size: 12px;">
+          <li><strong>GMV vs Net Revenue:</strong> Distinct clarity between ₹14.5 Cr Year 1 GMV and ₹1.10 Cr net platform revenue.</li>
+          <li><strong>Blended vs Paid CAC:</strong> ₹85 Blended CAC (₹30 in-store QR, ₹25 referral, ₹180 paid digital).</li>
+          <li><strong>Gross Margins:</strong> 72%–80% gross margin on net platform revenue streams.</li>
+          <li><strong>Burn Multiple:</strong> Seed burn multiple target of &lt;1.2&times; net burn / net new ARR.</li>
+          <li><strong>Concentration Risk:</strong> Top 10 Kiranas contribute &lt;8% total platform GMV.</li>
+        </ul>
+      </div>
+
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">2. Pirate Metrics (AARRR Engine)</h4>
+        <ul style="font-size: 12px;">
+          <li><strong>Acquisition:</strong> In-store cashier prompt & counter QR scan &rarr; app download.</li>
+          <li><strong>Activation:</strong> First successful GST bill upload & receipt credit verified in &lt;60s.</li>
+          <li><strong>Retention:</strong> 65%+ 30-day repeat receipt scanning rate in active corridors.</li>
+          <li><strong>Referral:</strong> 35% of active users invite at least 1 friend via "Give ₹25, Get ₹25".</li>
+          <li><strong>Revenue:</strong> 2.0% merchant GMV micro-take + ₹199/mo VIP subscription conversion.</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">3. Startup Valuation Frameworks</h4>
+        <div style="font-size: 12px; color: #94A3B8;">
+          <div style="margin-bottom: 6px;"><strong style="color: #F8FAFC;">First Chicago Method:</strong> Weighted average of Bull (₹45 Cr), Base (₹24 Cr), and Bear (₹12 Cr) scenarios = <strong>₹23.5 Cr</strong> valuation.</div>
+          <div style="margin-bottom: 6px;"><strong style="color: #F8FAFC;">VC Method:</strong> Target 10&times; return on ₹250 Cr Series B exit = <strong>₹20 Cr–₹25 Cr</strong> pre-money Seed.</div>
+          <div style="margin-bottom: 6px;"><strong style="color: #F8FAFC;">Berkus Method:</strong> Full value ascribed for proprietary tech, strategic parent backing, and dual pilot traction = <strong>$2.2M (₹18.5 Cr)</strong>.</div>
+          <div><strong style="color: #F8FAFC;">Seed Comps:</strong> Indian fintech-loyalty seed deals price at $2M–$3M pre-money.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="padding: 14px 20px; background: #121B2D; flex: 0.4;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span style="color: #10B981; font-weight: 700; font-size: 12.5px;">ACTIVE ENGAGEMENT BENCHMARK: </span>
+        <span style="color: #CBD5E1; font-size: 12.5px;">Target WAU/MAU of <strong>45%</strong> driven by daily grocery shopping frequency and automated tax ledger tracking.</span>
+        <span style="color: #F59E0B; font-weight: 700; font-size: 12.5px;">NPS BENCHMARK: &gt;62</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>APPENDIX C &bull; METRICS & VALUATION</span>
+  </div>
+</div>
+
+<!-- SLIDE 12: STAKEHOLDER QUESTIONS & PITCH OPTIMIZATION -->
+<div class="slide">
+  <div class="badge">STAKEHOLDER GOVERNANCE</div>
+  <h2 class="slide-title">Stakeholder Feedback Loops & Pitch Deck Optimization Principles</h2>
+  <div class="slide-subtitle">Structured feedback loops across customers, partners, and investors to continuously hone product-market fit.</div>
+
+  <div class="content-area">
+    <div class="grid-3">
+      <div class="card card-accent-top">
+        <h4 style="color: #10B981;">1. Feedback Loops by Stakeholder</h4>
+        <ul style="font-size: 12px;">
+          <li><strong>For Customers:</strong> <em>"What makes you choose to scan a receipt? Which store discounts do you use most frequently?"</em></li>
+          <li><strong>For Kirana Merchants:</strong> <em>"How many new customers did SpendIt credits bring this week? Is QR redemption fast enough at billing?"</em></li>
+          <li><strong>For Investors & Advisors:</strong> <em>"What is our #1 vulnerability in the unit economics? What will get you to a 'Yes' today?"</em></li>
+        </ul>
+      </div>
+
+      <div class="card card-blue-top">
+        <h4 style="color: #3B82F6;">2. The 5 Principles of Better Pitch Writing</h4>
+        <ul style="font-size: 12px;">
+          <li><strong>Clear:</strong> Short, punchy prose; elimination of jargon and crypto-adjacent buzzwords.</li>
+          <li><strong>Complete:</strong> Rigorous coverage of Who, What, Where, When, Why, and How.</li>
+          <li><strong>Compelling:</strong> Rooted in real household inflation struggles and Kirana existential pressure.</li>
+          <li><strong>Comparable:</strong> Clear benchmarks against quick-commerce aggregators and fintech rails.</li>
+          <li><strong>Realistic:</strong> Every projection anchored in defensible pilot corridor unit economics.</li>
+        </ul>
+      </div>
+
+      <div class="card card-gold-top">
+        <h4 style="color: #F59E0B;">3. Strategic Focus Filters</h4>
+        <ul style="font-size: 12px;">
+          <li><strong>Customer &gt; Self:</strong> Focus on consumer savings and merchant footfall, not just our algorithm.</li>
+          <li><strong>Benefits &gt; Features:</strong> Highlight realized grocery savings rather than OCR neural architecture.</li>
+          <li><strong>Offers &gt; Single Product:</strong> A network linking grocery, utility offsets, and boutique lifestyle.</li>
+          <li><strong>Coopetition &gt; Warfare:</strong> We empower Kiranas against dark stores rather than trying to destroy them.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="padding: 16px 20px; background: #121B2D; text-align: center; flex: 0.35;">
+      <p style="font-size: 15px; font-weight: 700; color: #10B981; letter-spacing: 0.5px;">
+        "Scan. Track. Save. — Reimagine. Rebuild. Renext."
+      </p>
+      <p style="font-size: 12px; color: #94A3B8; margin-top: 4px;">
+        SpendItWisely &bull; Renext Technologies Pvt Ltd &bull; Seed Investment Round &bull; Bangalore & Rudrapur Pilots
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>SPENDITWISELY &bull; A RENEXT TECHNOLOGIES VENTURE</span>
+    <span>STAKEHOLDER GOVERNANCE &bull; CONCLUDING SLIDE</span>
+  </div>
+</div>
+
+</body>
+</html>
